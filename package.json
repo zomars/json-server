@@ -4,7 +4,7 @@
   "description": "This is a project to use faker with json server",
   "scripts": {
     "start": "npm run server",
-    "generate": "node index.js > db.json",
+    "generate": "node index.js",
     "server": "node ./api/index.js"
   },
   "author": "Tapas Adhikary",

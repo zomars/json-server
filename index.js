@@ -1,4 +1,7 @@
 const faker = require("faker");
+const { tmpdir } = require("os");
+const fs = require("fs");
+const { join } = require("path");
 
 let database = { employers: [] };
 const threshold = 1000;
@@ -24,4 +27,7 @@ for (let i = 1; i <= threshold; i++) {
   });
 }
 
-console.log(JSON.stringify(database));
+const pathToFile = join(tmpdir(), "db.json");
+
+console.log(`pathToFile`, pathToFile);
+fs.writeFile(pathToFile, JSON.stringify(database), (err) => {});
