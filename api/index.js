@@ -5,7 +5,7 @@ const { join } = require("path");
 const pathToFile = join(tmpdir(), "db.json");
 const server = jsonServer.create();
 const router = jsonServer.router(pathToFile);
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({ readOnly: true });
 const port = process.env.PORT || 80;
 
 server.use(middlewares);
