@@ -27,10 +27,6 @@ for (let i = 1; i <= threshold; i++) {
   });
 }
 
-const pathToFile = join(tmpdir(), "db.json");
+const pathToFile = join(__dirname, "db.json");
 
 fs.writeFile(pathToFile, JSON.stringify(database), (err) => {});
-
-fs.readFile(pathToFile, "utf8", (err, data) => {
-  console.log(data);
-});
