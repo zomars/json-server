@@ -1,6 +1,7 @@
 const jsonServer = require("json-server");
 const { tmpdir } = require("os");
 const { join } = require("path");
+const fs = require("fs");
 
 const pathToFile = join(tmpdir(), "db.json");
 const server = jsonServer.create();
