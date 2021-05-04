@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const server = jsonServer.create();
 
-const router = jsonServer.router(path.join(__dirname, "../db.json"));
+const router = jsonServer.router(path.join(__dirname, "../public/db.json"));
 const middlewares = jsonServer.defaults({ readOnly: true });
 const port = process.env.PORT || 80;
 

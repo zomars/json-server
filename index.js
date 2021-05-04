@@ -27,6 +27,6 @@ for (let i = 1; i <= threshold; i++) {
   });
 }
 
-const pathToFile = join(__dirname, "db.json");
+const pathToFile = join(__dirname, "public", "db.json");
 
 fs.writeFile(pathToFile, JSON.stringify(database), (err) => {});
