@@ -19,6 +19,11 @@ const middlewares = jsonServer.defaults({ readOnly: true });
 const port = process.env.PORT || 80;
 
 server.use(middlewares);
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+  })
+);
 server.use("/api", router);
 
 server.listen(port, () => {
